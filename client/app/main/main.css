@@ -131,7 +131,10 @@ fieldset {
   border:0;
   padding:0;
 }
-
+#intake,#general,#referral,#demographics{
+    padding-top: 50px;
+    margin-top: -50px;
+}
 button, .button {
   border:2px solid white;
   color:white;

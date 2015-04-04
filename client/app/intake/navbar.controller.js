@@ -4,7 +4,7 @@ angular.module('sfhncApp')
   .controller('IntakeNavbarCtrl', function ($scope, $location) {
     $scope.menu = [{
       'title': 'Home',
-      'link': '/intake'
+      'link': '/'
     },{
       'title': 'Assessment',
       'link': '#intake'
