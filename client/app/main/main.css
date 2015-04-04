@@ -24,27 +24,18 @@
 
 
 /*   New styles*/
-Skip to content
- This repository
-Explore
-Gist
-Blog
-Help
-@gpavey gpavey
-
- Watch 2
-  Star 69
- Fork 20yearofmoo-articles/AngularJS-Forms-Article
- branch: master  AngularJS-Forms-Article/frontend/styles.css
-@matskomatsko on Sep 2, 2014 use ng-submitted flag in the css code
-1 contributor
-RawBlameHistory     341 lines (284 sloc)  4.67 kb
 *, *:before, *:after {
   box-sizing:border-box;
 }
-
-body, html {
+body {
+  padding:70px 0 0;
+}
+html {
   padding:0;
+}
+html, body {
+  font-family: Verdana;
+  font-size: 15px;
   margin:0;
 }
 
@@ -56,13 +47,9 @@ body, html {
   font-size:50px;
 }
 
-html, body {
-  font-family: Verdana;
-  font-size: 15px;
-  margin:0;
-  padding:0;
+.ib {
+  display: inline-block;
 }
-
 header {
   font-size:2rem;
   padding:10px;
@@ -72,82 +59,82 @@ header {
   margin:0;
   font-size:3rem;
   font-weight:normal;
-}
-
-.fields {
-  display:flex;
-  flex-flow: row wrap;
-  padding:10px;
-}
-
-.heading {
   display:block;
 }
 
-.fields .field {
-  position: relative;
-  padding:10px;
-  min-width:400px;
-  flex:1;
+.field {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border:1px solid black;
 }
-
-.validity, .label, .details {
-  display:table-cell;
-  vertical-align:top;
-  padding:20px;
-}
-
-.details {
+.field .input {
+  display: table-cell;
   padding:10px;
-}
-
-.field > .input {
-  padding:10px;
-  width:100%;
+  min-height: 70px;
+  width: 100%;
   background:white;
-  border:5px solid #ddd;
-  position:relative;
-  border-color:#ddd;
 }
 
 .field:hover > .input,
 .field > .input:focus {
-  border-color:#ccc;
+  /*border-color:#ccc;*/
 }
 
 .details > textarea.input {
   min-height:50px;
 }
 
-.label {
-  cursor:pointer;
-  color:#999;
-  width:5%;
+.field .label {
+  display: table-cell;
+  width: 25%;
+  border-left:1px solid black;
+  border-right:1px solid black;
+  color:black;
+  font-size:1rem;
+  border-radius: 0;
+  background-color: #eee;
+  white-space: normal;
+}
+.check {
+  display: table-cell;
+  width: 25%;
+  /*border:1px solid black;*/
+  padding:0 10px;
+  margin:0;
 }
 
 .validity {
   width:80px;
 }
 
-.label {
-  font-size:2rem;
-}
-
 .input {
   font-size:1.5rem;
-  border:0;
+  border: none;
   background:transparent;
 }
 
 .input:focus {
   outline:0;
 }
+.validity, .label, .details {
+  display:table-cell;
+  vertical-align:top;
+  padding:10px;
+}
+
+.details {
+  padding:10px;
+}
 
 fieldset {
   border:0;
   padding:0;
 }
-
+#intake,#general,#referral,#demographics{
+    padding-top: 50px;
+    margin-top: -50px;
+}
 button, .button {
   border:2px solid white;
   color:white;

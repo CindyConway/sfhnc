@@ -1,107 +1,42 @@
+<div class="navbar navbar-default navbar-fixed-top" ng-controller="IntakeNavbarCtrl">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+            <a ng-href="{{item.link}}">{{item.title}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<header>
+  <h1 class="heading text-center">Navigation Center</h1>
+</header>
+
 <form name="signupForm" novalidate
       ng-submit="form.submit(signupForm.$valid)"
       ng-class="{ loading:form.submitting }">
 
-<section class="case">
-  <header>
-    <h1 class="heading">Navigation Center</h1>
-  </header>
-  <div class="fields">
 
-    <div class="field name-field">
-      <input class="input"
-      type="text"
-      name="name"
-      ng-model="form.data.name"
-      placeholder="Case Manager: First Name + Last Name"
-      required />
-      <div ng-if="signupForm.$submitted || signupForm.name.$touched" ng-messages="signupForm.name.$error" class="errors">
-        <div ng-message="required">You did not enter your name</div>
-      </div>
-    </div>
+  <div ng-include="'app/intake/assessment.tpl.html'"></div>
+  <div ng-include="'app/intake/general.tpl.html'"></div>
+  <div ng-include="'app/intake/referral.tpl.html'"></div>
+  <div ng-include="'app/intake/demographics.tpl.html'"></div>
 
-    <div class="field intakeDate-field">
-      <input class="input"
-             type="date"
-             name="intakeDate"
-             ng-model="form.data.intakeDate"
-             name="IntakeDate"
-             placeholder="[DD/MM/YYYY]"
-             required />
-      <div ng-if="signupForm.$submitted || signupForm.intakeDate.$touched" ng-messages="signupForm.intakeDate.$error" class="errors">
-        <div ng-message="required">You did not enter the date</div>
-        <div ng-message="number">You have entered an invalid date</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- General Info -->
-<section class="generalInfo">
-  <header>
-    <h2 class="heading">General Information</h2>
-  </header>
-
-  <div class="fields">
-    <div class="field">
-      <label class="label" for="name">Date (from):</label>
-      <input class="input" type="datetime-local" name="dateFrom" ng-model="form.data.dateFrom" required class="input" />
-      <div ng-if="signupForm.$submitted || signupForm.dateFrom.$touched" ng-messages="signupForm.dateFrom.$error" class="errors">
-        <div ng-message="datetimelocal">You have entered an invalid date</div>
-        <div ng-message="required">You must enter a starting appointment date time</div>
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label" for="name">Date (to):</label>
-      <input type="datetime-local"
-             class="input"
-             name="dateTo"
-             ng-model="form.data.dateTo"
-             required />
-      <div ng-if="signupForm.$submitted || signupForm.dateTo.$touched" ng-messages="signupForm.dateTo.$error" class="errors">
-        <div ng-message="datetimelocal">You have entered an invalid date</div>
-        <div ng-message="required">You must enter an ending appointment date time</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="field">
-    <label class="label">
-      <input type="checkbox" name="allowNotifications" ng-model="notificationsOn" /> Notify me when the event is ready
-    </label>
-  </div>
-
-  <div class="fields email-fields">
-    <div ng-form="emails" ng-if="notificationsOn">
-      <a href="" class="button secondary" ng-click="form.data.emails.push('')">+ Email</a>
-      <div class="field" ng-repeat="reminder in form.data.emails track by $index" ng-form="reminderForm">
-        <input type="email" name="email" ng-model="reminder" placeholder="Email Address" class="input" required />
-        <a href="" class="button secondary" ng-click="form.data.emails.splice($index, 1)">
-          <span class="fa fa-trash"></span>
-        </a>
-      </div>
-    </div>
-
-    <div ng-if="signupForm.$submitted || signupForm.emails.$dirty" ng-messages="signupForm.emails.$error" class="errors">
-      <div ng-message="required">You did not enter an email for each field</div>
-      <div ng-message="email">Each field must contain a valid email</div>
-    </div>
-  </div>
-
-  <div ng-if="showRecaptcha">
-    <label class="label">
-      <p>Robots are not welcome here!</p>
-      <div re-captcha ng-model="form.data.recaptcha" name="captcha" required></div>
-      <div ng-if="form.captchaError" class="errors">
-        Please enter a new value and try again
-      </div>
-    </label>
-  </div>
-</section>
   <nav class="form-actions">
-    <input type="submit" value="Create Appointment" class="button primary" />
+    <input type="submit" value="Submit Form" class="button primary" />
   </nav>
 
 
