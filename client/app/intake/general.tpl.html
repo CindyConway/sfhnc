@@ -1,0 +1,281 @@
+<!-- General Info -->
+<section class="generalInfo" id="general">
+  <h2 class="text-center">General Information</h2>
+  <div class="fields">
+    <div class="field">
+      <label class="label">Client name</label>
+      <input class="input"
+              type="text"
+              name="clientName"
+              ng-model="form.data.clientName"
+              placeholder="Last,First,Middle"
+              required />
+      <div ng-if="signupForm.$submitted || signupForm.clientName.$touched" ng-messages="signupForm.clientName.$error" class="errors">
+        <div ng-message="required">You did not enter a name</div>
+      </div>
+
+      <label class="label">Alias or Nickname(s)</label>
+      <input class="input"
+              type="text"
+              name="Nickname"
+              ng-model="form.data.Nickname"/>
+    </div>
+  </div>
+
+  <div class="fields">
+    <div class="field">
+      <label class=" label">Date of Birth</label>
+      <input  class="input"
+              type="date"
+              name="dob"
+              ng-model="form.data.dob"
+              placeholder="[DD/MM/YYYY]"
+              required />
+      <div ng-if="signupForm.$submitted || signupForm.dob.$touched" ng-messages="signupForm.dob.$error" class="errors">
+        <div ng-message="required">You did not enter a Date of Birth</div>
+      </div>
+
+      <label class="label">Social Secutiry Number</label>
+      <input class="input"
+              type="text"
+              name="ssn"
+              ng-model="form.data.ssn"
+              name="ssn"
+              placeholder="XXX-XX-XXXX"
+              required />
+      <div ng-if="signupForm.$submitted || signupForm.ssn.$touched" ng-messages="signupForm.ssn.$error" class="errors">
+        <div ng-message="required">You did not enter the SSN</div>
+      </div>
+    </div>
+  </div>
+  <div class="fields">
+    <div class="field">
+      <label class="label">Does client have a picture ID?</label>
+      <div class="check">
+        <span class="ib">
+          <label>Yes</label>
+          <input  class="input"
+                  type="radio"
+                  value="yes"
+                  ng-model="form.data.id"
+                  />
+          </span>
+         <span class="ib">
+          <label>No</label>
+          <input  class="input"
+                  type="radio"
+                  value="no"
+                  ng-model="form.data.id"
+                  />
+          </span>
+      </div>
+      <label class="label">If no SSN, any other form(s) of identification (e.g.,foreign passport)? if so, describe.</label>
+      <input class="input"
+              type="text"
+              name="otherID"
+              ng-model="form.data.otherID"/>
+    </div>
+  </div>
+  <div class="fields">
+    <div class="field">
+      <label class="label">Marital Status</label>
+      <div class="check">
+        <span class="ib">
+          <label>Married/Domestic Partnership</label>
+          <input  class="input"
+                  type="radio"
+                  value="partner"
+                  ng-model="form.data.mStatus"
+                  />
+          </span>
+         <span class="ib">
+          <label>Divorced</label>
+          <input  class="input"
+                  type="radio"
+                  value="divorced"
+                  ng-model="form.data.mStatus"
+                  />
+          </span>
+      </div>
+      <div class="check">
+        <span class="ib">
+          <label>Separated</label>
+          <input  class="input"
+                  type="radio"
+                  value="separated"
+                  ng-model="form.data.mStatus"
+                  />
+          </span>
+         <span class="ib">
+          <label>Widowed</label>
+          <input  class="input"
+                  type="radio"
+                  value="widowed"
+                  ng-model="form.data.mStatus"
+                  />
+          </span>
+      </div>
+      <div class="check">
+        <span class="ib">
+          <label>Never Married</label>
+          <input  class="input"
+                  type="radio"
+                  value="never"
+                  ng-model="form.data.mStatus"
+                  />
+          </span>
+         <span class="ib">
+          <label>Unknown</label>
+          <input  class="input"
+                  type="radio"
+                  value="unknown"
+                  ng-model="form.data.mStatus"
+                  />
+        </span>
+        <span class="ib">
+          <label>Decline to State</label>
+          <input  class="input"
+                  type="radio"
+                  value="decline"
+                  ng-model="form.data.mStatus"
+                  />
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="fields">
+    <div class="field">
+      <label class="label">Does client have a mailing address? If so, provide.</label>
+      <input class="input"
+              type="text"
+              name="mailingAddress"
+              ng-model="form.data.mailingAddress"/>
+      <label class="label">How often does client check it?</label>
+      <div class="check">
+        <span class="ib">
+          <label>Daily</label>
+          <input class="input"
+                type="radio"
+                value="daily"
+                ng-model="form.data.mailCheck"
+                />
+        </span>
+        <span class="ib">
+          <label>Weekly</label>
+          <input class="input"
+                type="radio"
+                value="weekly"
+                ng-model="form.data.mailCheck"
+                />
+        </span>
+        <span class="ib">
+          <label>Monthly</label>
+          <input class="input"
+                type="radio"
+                value="monthly"
+                ng-model="form.data.mailCheck"
+                />
+        </span>
+        <span class="ib">
+          <label>Rarely/Never</label>
+          <input class="input"
+                type="radio"
+                value="rarely"
+                ng-model="form.data.mailCheck"
+                />
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="fields">
+    <div class="field">
+      <label class="label">Does client have a voicemail? If so, provide.</label>
+      <input class="input"
+              type="text"
+              name="mailingAddress"
+              ng-model="form.data.mailingAddress"/>
+      <label class="label">How often does client check it?</label>
+      <div class="check">
+        <span class="ib">
+          <label>Daily</label>
+          <input class="input"
+                type="radio"
+                value="daily"
+                ng-model="form.data.voiceMailCheck"
+                />
+        </span>
+        <span class="ib">
+          <label>Weekly</label>
+          <input class="input"
+                type="radio"
+                value="weekly"
+                ng-model="form.data.voiceMailCheck"
+                />
+        </span>
+        <span class="ib">
+          <label>Monthly</label>
+          <input class="input"
+                type="radio"
+                value="monthly"
+                ng-model="form.data.voiceMailCheck"
+                />
+        </span>
+        <span class="ib">
+          <label>Rarely/Never</label>
+          <input class="input"
+                type="radio"
+                value="rarely"
+                ng-model="form.data.voiceMailCheck"
+                />
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="fields">
+    <div class="field">
+      <label class="label">Does client have email? If so, provide.</label>
+      <input class="input"
+              type="text"
+              name="mailingAddress"
+              ng-model="form.data.mailingAddress"/>
+      <label class="label">How often does client check it?</label>
+      <div class="check">
+        <span class="ib">
+          <label>Daily</label>
+          <input class="input"
+                type="radio"
+                value="daily"
+                ng-model="form.data.emailCheck"
+                />
+        </span>
+        <span class="ib">
+          <label>Weekly</label>
+          <input class="input"
+                type="radio"
+                value="weekly"
+                ng-model="form.data.emailCheck"
+                />
+        </span>
+        <span class="ib">
+          <label>Monthly</label>
+          <input class="input"
+                type="radio"
+                value="monthly"
+                ng-model="form.data.emailCheck"
+                />
+        </span>
+        <span class="ib">
+          <label>Rarely/Never</label>
+          <input class="input"
+                type="radio"
+                value="rarely"
+                ng-model="form.data.emailCheck"
+                />
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

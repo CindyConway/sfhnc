@@ -1,0 +1,187 @@
+<!-- Referral Info -->
+<section class="referralInfo" id="referral">
+  <h2 class="text-center">Referral Information</h2>
+    <div class="fields">
+      <div class="field">
+        <label class="label">Date of Entry to Navigation Center</label>
+        <input class="input"
+               type="date"
+               name="entryDate"
+               ng-model="form.data.entryDate"
+               name="entryDate"
+               placeholder="[DD/MM/YYYY]"
+               required />
+        <div ng-if="signupForm.$submitted || signupForm.entryDate.$touched" ng-messages="signupForm.entrDate.$error" class="errors">
+          <div ng-message="required">You did not enter the date</div>
+          <div ng-message="number">You have entered an invalid date</div>
+        </div>
+              <label class="label">Referral Date</label>
+        <input class="input"
+               type="date"
+               name="referralDate"
+               ng-model="form.data.referralDate"
+               name="referralDate"
+               placeholder="[DD/MM/YYYY]"
+               required />
+        <div ng-if="signupForm.$submitted || signupForm.referralDate.$touched" ng-messages="signupForm.referralDate.$error" class="errors">
+          <div ng-message="required">You did not enter the date</div>
+          <div ng-message="number">You have entered an invalid date</div>
+        </div>
+      </div>
+    </div>
+
+    <div class='fields'>
+      <div class='field'>
+        <label class=" label">Referral Type</label>
+        <div class="check">
+          <span class="ib">
+            <label>Individual</label>
+            <input  class="input"
+                    type="radio"
+                    value="individual"
+                    ng-model="form.data.referralBox"
+                    />
+            </span>
+           <span class="ib">
+            <label>Group</label>
+            <input  class="input"
+                    type="radio"
+                    value="group"
+                    ng-model="form.data.referralBox"
+                    />
+            </span>
+        </div>
+        <label class="label">If Group Referral, Number of Individuals Referred</label>
+        <input class="input"
+                type="text"
+                name="numberReferrals"
+                ng-model="form.data.numberReferrals"/>
+      </div>
+    </div>
+
+    <div class="fields">
+      <div class="field">
+        <label class="label">Group Identifier and Description (if applicable)</label>
+        <input class="input"
+                type="text"
+                name="groupIdentifier"
+                ng-model="form.data.groupIdentifier"/>
+      </div>
+    </div>
+
+    <div class='fields'>
+      <div class='field'>
+        <label class="label">Program Making First Contact with Client</label>
+        <div class="">
+          <span class="ib">
+            <label>Police</label>
+            <input  class="input"
+                    type="radio"
+                    value="police"
+                    ng-model="form.data.firstContact"
+                    />
+            </span>
+           <span class="ib">
+            <label>Sheriff</label>
+            <input  class="input"
+                    type="radio"
+                    value="sheriff"
+                    ng-model="form.data.firstContact"
+                    />
+            </span>
+            <span class="ib">
+            <label>DPW</label>
+            <input  class="input"
+                    type="radio"
+                    value="dpw"
+                    ng-model="form.data.firstContact"
+                    />
+            </span>
+            <span class="ib">
+            <label>Homeward Bound</label>
+            <input  class="input"
+                    type="radio"
+                    value="homewardBound"
+                    ng-model="form.data.firstContact"
+                    />
+            </span>
+            <span class="ib">
+            <label>SFHOT</label>
+            <input  class="input"
+                    type="radio"
+                    value="sfhot"
+                    ng-model="form.data.firstContact"
+                    />
+            </span>
+            Other
+            <input class="ib"
+                    type="text"
+                    name="firstContactOther"
+                    ng-model="form.data.firstContactOther"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="fields">
+      <div class="field">
+        <label class="label">Where was client living when referred (closest address or intersection)?</label>
+        <input class="input"
+                type="text"
+                name="referredAddress"
+                ng-model="form.data.referredAddress"/>
+      </div>
+    </div>
+
+    <div class='fields'>
+      <div class='field'>
+        <label class="label">If not referred directly to Navigation Center, where did client go first?</label>
+        <div class="">
+          <span class="ib">
+            <label>Emergency Room</label>
+            <input  class="input"
+                    type="radio"
+                    value="emergencyRoom"
+                    ng-model="form.data.firstContact"
+                    />
+            </span>
+           <span class="ib">
+            <label>Stabilization Bed</label>
+            <input  class="input"
+                    type="radio"
+                    value="stabilizationBed"
+                    ng-model="form.data.firstContact"
+                    />
+            </span>
+           <span class="ib">
+            <label>Detox</label>
+            <input  class="input"
+                    type="radio"
+                    value="detox"
+                    ng-model="form.data.firstContact"
+                    />
+            </span>
+           <span class="ib">
+            <label>Jail</label>
+            <input  class="input"
+                    type="radio"
+                    value="jail"
+                    ng-model="form.data.firstContact"
+                    />
+            </span>
+           <span class="ib">
+            <label>N/A</label>
+            <input  class="input"
+                    type="radio"
+                    value="na"
+                    ng-model="form.data.firstContact"
+                    />
+            </span>
+            Other
+            <input class="ib"
+                    type="text"
+                    name="firstContactOther"
+                    ng-model="form.data.firstContactOther"/>
+        </div>
+      </div>
+    </div>
+</section>

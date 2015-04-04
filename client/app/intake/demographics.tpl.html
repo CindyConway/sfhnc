@@ -1,0 +1,242 @@
+<!-- Demographics Info -->
+<section class="demographicsInfo" id="demographics">
+  <h2 class="text-center">Demographics</h2>
+    <div class='fields'>
+      <div class='field'>
+        <label class="label">Race/Ethnicity</label>
+        <div class="">
+          <span class="ib">
+            <label>American Indian or Alaskan Native</label>
+            <input  class="input"
+                    type="radio"
+                    value="native"
+                    ng-model="form.data.ethnicity"
+                    />
+            </span>
+           <span class="ib">
+            <label>Asian, Black or African American</label>
+            <input  class="input"
+                    type="radio"
+                    value="asian"
+                    ng-model="form.data.ethnicity"
+                    />
+            </span>
+           <span class="ib">
+            <label>Native Hawaiian or Other Pacific Islander</label>
+            <input  class="input"
+                    type="radio"
+                    value="hawaiian"
+                    ng-model="form.data.ethnicity"
+                    />
+            </span>
+           <span class="ib">
+            <label>White</label>
+            <input  class="input"
+                    type="radio"
+                    value="white"
+                    ng-model="form.data.ethnicity"
+                    />
+            </span>
+           <span class="ib">
+            <label>Unknown</label>
+            <input  class="input"
+                    type="radio"
+                    value="unknown"
+                    ng-model="form.data.ethnicity"
+                    />
+            </span>
+            <span class="ib">
+            <label>Decline to State</label>
+            <input  class="input"
+                    type="radio"
+                    value="decline"
+                    ng-model="form.data.ethnicity"
+                    />
+            </span>
+            Other
+            <input class="ib"
+                    type="text"
+                    name="ethnicityOther"
+                    ng-model="form.data.ethnicityOther"/>
+        </div>
+      </div>
+    </div>
+
+    <div class='fields'>
+      <div class='field'>
+        <label class="label">Gender</label>
+        <div class="">
+          <span class="ib">
+            <label>Male</label>
+            <input  class="input"
+                    type="radio"
+                    value="male"
+                    ng-model="form.data.gender"
+                    />
+            </span>
+           <span class="ib">
+            <label>Female</label>
+            <input  class="input"
+                    type="radio"
+                    value="female"
+                    ng-model="form.data.gender"
+                    />
+            </span>
+           <span class="ib">
+            <label>Transgender (male to female)</label>
+            <input  class="input"
+                    type="radio"
+                    value="transgenderMtoF"
+                    ng-model="form.data.gender"
+                    />
+            </span>
+           <span class="ib">
+            <label>Transgender (female to male)</label>
+            <input  class="input"
+                    type="radio"
+                    value="transgenderFtoM"
+                    ng-model="form.data.gender"
+                    />
+            </span>
+           <span class="ib">
+            <label>Decline to State</label>
+            <input  class="input"
+                    type="radio"
+                    value="decline"
+                    ng-model="form.data.gender"
+                    />
+            </span><br>
+            Other
+            <input class="ib"
+                    type="text"
+                    name="genderOther"
+                    ng-model="form.data.genderOther"/>
+        </div>
+      </div>
+    </div>
+
+    <div class='fields'>
+      <div class='field'>
+        <label class="label">LGBQ Identity</label>
+        <div class="check">
+          <span class="ib">
+            <label>Yes</label>
+            <input  class="input"
+                    type="radio"
+                    value="yes"
+                    ng-model="form.data.lgbqIdentity"
+                    />
+            </span>
+           <span class="ib">
+            <label>No</label>
+            <input  class="input"
+                    type="radio"
+                    value="no"
+                    ng-model="form.data.lgbqIdentity"
+                    />
+            </span>
+           <span class="ib">
+            <label>Unknown</label>
+            <input  class="input"
+                    type="radio"
+                    value="unknown"
+                    ng-model="form.data.lgbqIdentity"
+                    />
+            </span>
+           <span class="ib">
+            <label>Decline to State</label>
+            <input  class="input"
+                    type="radio"
+                    value="decline"
+                    ng-model="form.data.lgbqIdentity"
+                    />
+            </span>
+        </div>
+<!--       </div>
+    </div>
+
+    <div class='fields'>
+      <div class='field'> -->
+        <label class="label">Can Client communicate in English?</label>
+        <div class="check">
+          <span class="ib">
+            <label>Yes</label>
+            <input  class="input"
+                    type="radio"
+                    value="yes"
+                    ng-model="form.data.speakEnglish"
+                    />
+            </span>
+           <span class="ib">
+            <label>No</label>
+            <input  class="input"
+                    type="radio"
+                    value="no"
+                    ng-model="form.data.speakEnglish"
+                    />
+            </span>
+        </div>
+      </div>
+    </div>
+
+    <div class='fields'>
+      <div class='field'>
+        <label class="label">Preferred Language</label>
+        <div class="">
+          <span class="ib">
+            <label>English</label>
+            <input  class="input"
+                    type="radio"
+                    value="english"
+                    ng-model="form.data.preferredLanguage"
+                    />
+            </span>
+           <span class="ib">
+            <label>Chinese</label>
+            <input  class="input"
+                    type="radio"
+                    value="chinese"
+                    ng-model="form.data.preferredLanguage"
+                    />
+            </span>
+           <span class="ib">
+            <label>Russian</label>
+            <input  class="input"
+                    type="radio"
+                    value="russian"
+                    ng-model="form.data.preferredLanguage"
+                    />
+            </span>
+           <span class="ib">
+            <label>Spanish</label>
+            <input  class="input"
+                    type="radio"
+                    value="Tagalog"
+                    ng-model="form.data.preferredLanguage"
+                    />
+            </span>
+           <span class="ib">
+            <label>Vietnamese</label>
+            <input  class="input"
+                    type="radio"
+                    value="vietnamese"
+                    ng-model="form.data.preferredLanguage"
+                    />
+            </span>
+            <span class="ib">
+            <label>Decline to State</label>
+            <input  class="input"
+                    type="radio"
+                    value="decline"
+                    ng-model="form.data.preferredLanguage"
+                    />
+            </span>
+            Other
+            <input class="ib"
+                    type="text"
+                    name="preferredLanguageOther"
+                    ng-model="form.data.preferredLanguageOther"/>
+        </div>
+      </div>
+    </div>
+</section>

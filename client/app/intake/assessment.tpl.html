@@ -1,0 +1,67 @@
+<section class="case" id="assessment">
+      <h2 class="text-center">Intake Assessment</h2>
+  <div class="fields">
+    <div class="field name-field">
+
+          <label class=" label">Case Manager</label>
+          <input class="input"
+          type="text"
+          name="name"
+          ng-model="form.data.name"
+          placeholder="First Name + Last Name"
+          required />
+          <div ng-if="signupForm.$submitted || signupForm.name.$touched" ng-messages="signupForm.name.$error" class="errors">
+            <div ng-message="required">You did not enter your name</div>
+          </div>
+
+          <label class="label">Intake/Assessment Date</label>
+          <input class="input"
+                 type="date"
+                 name="intakeDate"
+                 ng-model="form.data.intakeDate"
+                 name="IntakeDate"
+                 placeholder="[DD/MM/YYYY]"
+                 required />
+          <div ng-if="signupForm.$submitted || signupForm.intakeDate.$touched" ng-messages="signupForm.intakeDate.$error" class="errors">
+            <div ng-message="required">You did not enter the date</div>
+            <div ng-message="number">You have entered an invalid date</div>
+          </div>
+    </div>
+  </div>
+    <div class="fields">
+    <div class="field">
+      <label class=" label">Has the client signed consent forms?</label>
+      <div class="check">
+        <span class="ib">
+          <label>General</label>
+          <input  class="input"
+                  type="checkbox"
+                  name="generalBox"
+                  ng-model="form.data.generalBox"
+                  />
+          </span>
+         <span class="ib">
+          <label>DPH</label>
+          <input  class="input"
+                  type="checkbox"
+                  name="dphBox"
+                  ng-model="form.data.dphBox"
+                  />
+          </span>
+      </div>
+
+      <label class="label">Date consent form was signed</label>
+      <input class="input"
+             type="date"
+             name="consentDate"
+             ng-model="form.data.consentDate"
+             name="consentDate"
+             placeholder="[DD/MM/YYYY]"
+             required />
+      <div ng-if="signupForm.$submitted || signupForm.consentDate.$touched" ng-messages="signupForm.consentDate.$error" class="errors">
+        <div ng-message="required">You did not enter the date</div>
+        <div ng-message="number">You have entered an invalid date</div>
+      </div>
+    </div>
+  </div>
+</section>
